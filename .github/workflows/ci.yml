@@ -1,0 +1,14 @@
+name: Demo Workflow
+
+on: [push]  # Déclenche ce workflow à chaque 'git push'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # Machine virtuelle Linux
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Run a hello script
+        run: echo "Hello from GitHub Actions!"
